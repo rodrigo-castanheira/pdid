@@ -7,11 +7,8 @@ include("dbHandler.php");
         die('Invalid or missing bug ID');
     }
     
-    /** @var PDO $dbHandler */
-    $dbHandler = createDbHandler();
-
     try{
-        $stmt = $dbHandler->prepare('DELETE FROM bugsDB WHERE id = :id');
+        $stmt = $dbHandler->prepare('DELETE FROM bugs WHERE id = :id');
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
         $stmt->execute();
@@ -21,5 +18,5 @@ include("dbHandler.php");
         die("Delete error: " . $e->getMessage());
     }
 
-    header('Location: bugReporter.php')
+    header('Location: bugReporter.php');
 ?>

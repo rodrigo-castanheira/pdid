@@ -12,7 +12,7 @@
 <body>
     <h1>Bug Reporter</h1>
 
-    <table>
+    <table border="1">
         <tr>
             <th>Product Name</th>
             <th>Version</th>
@@ -21,6 +21,7 @@
             <th>Frequency</th>
             <th>Solutions</th>
             <th>Edit Link</th>
+            <th>Delete</th>
         </tr>
 
     <?php
@@ -34,6 +35,7 @@
                     <td>{$row['frequency']}</td>
                     <td>{$row['solution']}</td>
                     <td><a href='bugReporterInput.php?id={$row['id']}'>Edit</a></td>
+                    <td><a href='deletebug.php?id={$row['id']}'>Delete</a></td>
                   </tr>";
         }
 
