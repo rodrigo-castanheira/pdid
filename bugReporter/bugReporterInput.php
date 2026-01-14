@@ -3,12 +3,12 @@
 function ErrorChecks(){
     global $dbHandler;
 
-    $prdc = filter_input(INPUT_POST["product"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $ver = filter_input(INPUT_POST["version"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $hw = filter_input(INPUT_POST["hw"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $os = filter_input(INPUT_POST["os"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $frq = filter_input(INPUT_POST["frq"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $sol = filter_input(INPUT_POST["solution"], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $prdc = filter_input(INPUT_POST, "product", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $ver = filter_input(INPUT_POST, "version", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $hw = filter_input(INPUT_POST, "hw", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $os = filter_input(INPUT_POST, "os", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $frq = filter_input(INPUT_POST, "frq", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $sol = filter_input(INPUT_POST, "solution", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     
     $errors = array();
 
